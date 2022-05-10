@@ -1,5 +1,6 @@
 # Pointer Event Polyfill
 
+这个 Polyfill 可以解决由于部分浏览器不支持 PointerEvent 从而引发 Oasis 脚本生命周期中 onPointerXXX 回调异常的问题。
 ## Usage
 
 ### 安装 npm 包
