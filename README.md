@@ -1,5 +1,7 @@
 # Pointer Event Polyfill
 
+![image](https://user-images.githubusercontent.com/7768919/167619363-b358b4af-c3c2-4aa9-a2d7-a7b04cb84330.png)
+
 这个 Polyfill 可以解决由于部分浏览器不支持 PointerEvent 从而引发 Oasis 脚本生命周期中 onPointerXXX 回调异常的问题。
 ## Usage
 
