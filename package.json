@@ -1,19 +1,40 @@
 {
   "name": "@oasis-engine/pointer-polyfill",
-  "version": "0.7.0-beta.3",
-  "license": "MIT",
-  "main": "dist/main.js",
-  "module": "dist/module.js",
-  "browser": "dist/browser.js",
-  "debug": "src/index.ts",
-  "types": "types/index.d.ts",
-  "scripts": {
-    "b:types": "tsc"
+  "version": "0.0.1",
+  "description": "PointerEvent Polyfill for Oasis",
+  "homepage": "http://oasisengine.cn",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cptbtptpbcptdtptp/PointerEventPolyfill.git"
   },
-  "dependencies": {
+  "license": "MIT",
+  "module": "dist/index.js",
+  "debug": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "husky": {
+    "hooks": {}
+  },
+  "lint-staged": {
+    "**/*.less": "stylelint --syntax less",
+    "**/*.{js,jsx,less}": [
+      "prettier --write",
+      "git add"
+    ],
+    "**/*.{js,jsx}": "npm run lint-staged:js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^3.9.3"
   },
   "files": [
-    "dist/**/*",
-    "types/**/*"
-  ]
+    "dist/**/*"
+  ],
+  "resolutions": {
+    "@typescript-eslint/eslint-plugin": "^4.12.0",
+    "remark-mdx": "2.0.0-next.9"
+  },
+  "title": "Oasis Engine"
 }

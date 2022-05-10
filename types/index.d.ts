@@ -1,1 +1,0 @@
-export { PointerPolyfill } from "./PointerPolyfill";
