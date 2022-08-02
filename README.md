@@ -5,7 +5,7 @@
 这个 Polyfill 可以解决由于部分浏览器不支持 PointerEvent 从而引发 Oasis 脚本生命周期中 onPointerXXX 回调异常的问题。
 ## Usage
 
-### 安装 npm 包
+### 安装 npm 包 (请使用最新版本的包)
 
 ```sh
 npm install @oasis-engine/pointer-polyfill
@@ -14,15 +14,8 @@ npm install @oasis-engine/pointer-polyfill
 ### 导入
 
 ```javascript
-import { PointerPolyfill } from "@oasis-engine/pointer-polyfill";
-```
-
-### 注册
-
-在引擎使用的画布上增加对 PointerEvent 的兼容。
-
-```javascript
-PointerPolyfill.register(htmlCanvasElement);
+// 无需其他操作
+import "@oasis-engine/pointer-polyfill";
 ```
 
 ## QA
