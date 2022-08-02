@@ -1,1 +1,3 @@
-export { PointerPolyfill } from "./PointerPolyfill";
+import { PointerPolyfill } from "./PointerPolyfill";
+
+PointerPolyfill.registerPointerPolyFill();

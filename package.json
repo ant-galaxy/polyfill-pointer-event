@@ -1,6 +1,6 @@
 {
   "name": "@oasis-engine/pointer-polyfill",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "PointerEvent Polyfill for Oasis",
   "homepage": "http://oasisengine.cn",
   "repository": {
@@ -12,7 +12,8 @@
   "debug": "src/index.ts",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "dev": "tsc -w"
   },
   "husky": {
     "hooks": {}

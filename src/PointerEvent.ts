@@ -1,10 +1,10 @@
-import { PointerPolyfill } from "./PointerPolyfill";
-
-export class PointerEvent extends Event {
+export class PointerEvent extends UIEvent {
   public pointerType: string;
   public pointerId: number;
   public offsetX: number;
   public offsetY: number;
+  public button: number = 0;
+  public buttons: number = 1;
 
   /**
    * Pointer Event.
@@ -20,12 +20,16 @@ export class PointerEvent extends Event {
    * @param touch - Source Data
    * @returns
    */
-  public static createFromTouch(pointerType: string, touch: Touch): PointerEvent {
+  public static createFromTouch(
+    pointerType: string,
+    touch: Touch,
+    target: HTMLCanvasElement
+  ): PointerEvent {
     var evt = new PointerEvent(pointerType);
     evt.pointerType = "touch";
     evt.pointerId = (touch.identifier || 0) + 2;
-    evt.offsetX = touch.pageX - PointerPolyfill.canvas.offsetLeft;
-    evt.offsetY = touch.pageY - PointerPolyfill.canvas.offsetTop;
+    evt.offsetX = touch.pageX - target.offsetLeft;
+    evt.offsetY = touch.pageY - target.offsetTop;
     return evt;
   }
 }
