@@ -14,7 +14,6 @@ npm install @oasis-engine/pointer-polyfill
 ### 导入
 
 ```javascript
-// 无需其他操作
 import "@oasis-engine/pointer-polyfill";
 ```
 
