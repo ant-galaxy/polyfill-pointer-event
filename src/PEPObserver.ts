@@ -48,8 +48,14 @@ export class PEPObserver {
     for (let i = 0, n = mutationList.length; i < n; i++) {
       const mutation = mutationList[i];
       if (mutation.type === "childList") {
-        this._flattenMutationTree(mutation.addedNodes, this._onAddElement);
-        this._flattenMutationTree(mutation.removedNodes, this._onDelElement);
+        this._flattenMutationTree(
+          mutation.addedNodes,
+          this._onAddElement.bind(this)
+        );
+        this._flattenMutationTree(
+          mutation.removedNodes,
+          this._onDelElement.bind(this)
+        );
       }
     }
   }
