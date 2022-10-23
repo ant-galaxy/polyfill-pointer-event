@@ -37,6 +37,7 @@ export class PointerPolyfill {
   }
 
   private static onTouchStart(evt: TouchEvent) {
+    evt.cancelable && evt.preventDefault();
     const target = evt.target as HTMLCanvasElement;
     var changedTouches = evt.changedTouches || evt.touches;
     for (var i = 0, n = changedTouches.length; i < n; i++) {
@@ -47,6 +48,7 @@ export class PointerPolyfill {
   }
 
   private static onTouchEnd(evt: TouchEvent) {
+    evt.cancelable && evt.preventDefault();
     const target = evt.target as HTMLCanvasElement;
     var changedTouches = evt.changedTouches || evt.touches;
     for (var i = 0, n = changedTouches.length; i < n; i++) {
@@ -61,6 +63,7 @@ export class PointerPolyfill {
   }
 
   private static onTouchMove(evt: TouchEvent) {
+    evt.cancelable && evt.preventDefault();
     const target = evt.target as HTMLCanvasElement;
     var changedTouches = evt.changedTouches || evt.touches;
     for (var i = 0, n = changedTouches.length; i < n; i++) {
@@ -71,6 +74,7 @@ export class PointerPolyfill {
   }
 
   private static onTouchCancel(evt: TouchEvent) {
+    evt.cancelable && evt.preventDefault();
     const target = evt.target as HTMLCanvasElement;
     var changedTouches = evt.changedTouches || evt.touches;
     for (var i = 0, n = changedTouches.length; i < n; i++) {
