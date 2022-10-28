@@ -89,7 +89,13 @@ export class PEPObserver {
 
   private _findCanvas(target: any): NodeListOf<HTMLCanvasElement> {
     if (target.querySelectorAll) {
-      return target.querySelectorAll("canvas");
+      if (target.getContext) {
+        // 判断是画布
+        // @ts-ignore
+        return [target];
+      } else {
+        return target.querySelectorAll("canvas");
+      }
     } else {
       return null;
     }
