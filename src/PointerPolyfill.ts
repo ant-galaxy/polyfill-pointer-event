@@ -41,9 +41,16 @@ export class PointerPolyfill {
     const target = evt.target as HTMLCanvasElement;
     var changedTouches = evt.changedTouches || evt.touches;
     for (var i = 0, n = changedTouches.length; i < n; i++) {
-      target.dispatchEvent(
-        PointerEvent.createFromTouch("pointerdown", changedTouches[i], target)
+      const pointerEvent = PointerEvent.createFromTouch(
+        "pointerdown",
+        changedTouches[i],
+        target
       );
+      // @ts-ignore
+      pointerEvent.button = 0;
+      // @ts-ignore
+      pointerEvent.buttons = 1;
+      target.dispatchEvent(pointerEvent);
     }
   }
 
@@ -53,12 +60,26 @@ export class PointerPolyfill {
     var changedTouches = evt.changedTouches || evt.touches;
     for (var i = 0, n = changedTouches.length; i < n; i++) {
       var touch = changedTouches[i];
-      target.dispatchEvent(
-        PointerEvent.createFromTouch("pointerup", touch, target)
+      const upPointerEvent = PointerEvent.createFromTouch(
+        "pointerup",
+        touch,
+        target
       );
-      target.dispatchEvent(
-        PointerEvent.createFromTouch("pointerout", touch, target)
+      // @ts-ignore
+      upPointerEvent.button = 0;
+      // @ts-ignore
+      upPointerEvent.buttons = 0;
+      target.dispatchEvent(upPointerEvent);
+      const outPointerEvent = PointerEvent.createFromTouch(
+        "pointerout",
+        touch,
+        target
       );
+      // @ts-ignore
+      outPointerEvent.button = 0;
+      // @ts-ignore
+      outPointerEvent.buttons = 0;
+      target.dispatchEvent(outPointerEvent);
     }
   }
 
@@ -67,9 +88,16 @@ export class PointerPolyfill {
     const target = evt.target as HTMLCanvasElement;
     var changedTouches = evt.changedTouches || evt.touches;
     for (var i = 0, n = changedTouches.length; i < n; i++) {
-      target.dispatchEvent(
-        PointerEvent.createFromTouch("pointermove", changedTouches[i], target)
+      const pointerEvent = PointerEvent.createFromTouch(
+        "pointermove",
+        changedTouches[i],
+        target
       );
+      // @ts-ignore
+      pointerEvent.button = 0;
+      // @ts-ignore
+      pointerEvent.buttons = 1;
+      target.dispatchEvent(pointerEvent);
     }
   }
 
@@ -78,9 +106,16 @@ export class PointerPolyfill {
     const target = evt.target as HTMLCanvasElement;
     var changedTouches = evt.changedTouches || evt.touches;
     for (var i = 0, n = changedTouches.length; i < n; i++) {
-      target.dispatchEvent(
-        PointerEvent.createFromTouch("pointerout", changedTouches[i], target)
+      const pointerEvent = PointerEvent.createFromTouch(
+        "pointercancel",
+        changedTouches[i],
+        target
       );
+      // @ts-ignore
+      pointerEvent.button = -1;
+      // @ts-ignore
+      pointerEvent.buttons = 0;
+      target.dispatchEvent(pointerEvent);
     }
   }
 }
