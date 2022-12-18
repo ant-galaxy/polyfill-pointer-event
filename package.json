@@ -1,6 +1,6 @@
 {
   "name": "@oasis-engine/pointer-polyfill",
-  "version": "0.0.10",
+  "version": "0.0.12",
   "description": "PointerEvent Polyfill for Oasis",
   "homepage": "http://oasisengine.cn",
   "repository": {
