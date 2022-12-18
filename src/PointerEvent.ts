@@ -24,6 +24,10 @@ export class PointerEvent {
     evt.pointerId = (touch.identifier || 0) + 2;
     const rect = target.getBoundingClientRect();
     // @ts-ignore
+    evt.clientX = touch.clientX;
+    // @ts-ignore
+    evt.clientY = touch.clientY;
+    // @ts-ignore
     evt.offsetX = touch.clientX - rect.left;
     // @ts-ignore
     evt.offsetY = touch.clientY - rect.top;
