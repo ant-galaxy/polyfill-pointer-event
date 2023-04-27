@@ -1,7 +1,7 @@
 # Pointer Event Polyfill
 
 <p align='left'>
-<b>简体中文</b> | <a href="https://github.com/oasis-engine/polyfill-pointer-event/blob/main/README.md">English</a>
+<b>简体中文</b> | <a href="https://github.com/galacean/polyfill-pointer-event/blob/main/README.md">English</a>
 <!-- Contributors: Thanks for geting interested, however we DON'T accept new transitions to the README, thanks. -->
 </p>
 
@@ -9,19 +9,20 @@
 
 ![image](https://user-images.githubusercontent.com/7768919/167619363-b358b4af-c3c2-4aa9-a2d7-a7b04cb84330.png)
 
-这个 Polyfill 可以解决由于部分浏览器不支持 PointerEvent 从而引发 Oasis 脚本生命周期中 onPointerXXX 回调异常的问题。
+这个 Polyfill 可以解决由于部分浏览器不支持 PointerEvent 从而引发 Galacean 脚本生命周期中 onPointerXXX 回调异常的问题。
+
 ## 使用方法
 
 ### 安装 npm 包 (请使用最新版本的包)
 
 ```sh
-npm install @oasis-engine/pointer-polyfill
+npm install @galacean/pointer-polyfill
 ```
 
 ### 导入
 
 ```javascript
-import "@oasis-engine/pointer-polyfill";
+import "@galacean/pointer-polyfill";
 ```
 
 ## QA

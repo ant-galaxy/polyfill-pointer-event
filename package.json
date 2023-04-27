@@ -1,11 +1,11 @@
 {
-  "name": "@oasis-engine/pointer-polyfill",
-  "version": "0.0.12",
-  "description": "PointerEvent Polyfill for Oasis",
-  "homepage": "http://oasisengine.cn",
+  "name": "@galacean//pointer-polyfill",
+  "version": "0.0.1",
+  "description": "PointerEvent Polyfill for Galacean",
+  "homepage": "https://galacean.antgroup.com/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cptbtptpbcptdtptp/PointerEventPolyfill.git"
+    "url": "git@github.com:galacean/polyfill-pointer-event.git"
   },
   "license": "MIT",
   "module": "dist/index.js",
@@ -37,5 +37,5 @@
     "@typescript-eslint/eslint-plugin": "^4.12.0",
     "remark-mdx": "2.0.0-next.9"
   },
-  "title": "Oasis Engine"
+  "title": "Galacean Engine"
 }

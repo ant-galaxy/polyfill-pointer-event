@@ -15,7 +15,7 @@ export class PointerPolyfill {
 
   /**
    * 注册画布，使其可以接收到 Pointer 事件
-   * @param canvas - Oasis 运行的原生画布
+   * @param canvas - Galacean 运行的原生画布
    * @returns
    */
   static registerCanvas(canvas: HTMLCanvasElement): void {
@@ -71,7 +71,7 @@ export class PointerPolyfill {
       upPointerEvent.buttons = 0;
       target.dispatchEvent(upPointerEvent);
       const outPointerEvent = PointerEvent.createFromTouch(
-        "pointerout",
+        "pointerleave",
         touch,
         target
       );
