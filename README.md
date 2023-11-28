@@ -22,7 +22,7 @@ npm install @galacean/pointer-polyfill
 ### import
 
 ```javascript
-import "@galacean//pointer-polyfill";
+import "@galacean/pointer-polyfill";
 ```
 
 ## QA
